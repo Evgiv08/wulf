@@ -14,8 +14,8 @@
 	font-weight: 400; 
 }
 @font-face {
-	font-family: "Proxima Nova - Extrabld";
-	src: url(../fonts/ProximaNovaExtraBold/proximanova-extrabold.woff);
+	font-family: "fontawesome";
+	src: url(../fonts/fontawesome-webfont.woff);
 	font-weight: 400; 
 }
 .container {
@@ -260,6 +260,17 @@ footer {
 		min-height: 550px;
 		text-align: center;
 		margin-top: 268px;
+		position: relative;
+		#close {
+			position: absolute;
+			font-family: fontawesome;
+			font-size: 60px;
+			font-weight: 100;
+			top: 70px;
+			right: 150px;
+			padding: 0;
+			background-color: transparent;
+		}
 		h2 {
 			width: 1055px;
 			margin: 0 auto;
@@ -269,6 +280,7 @@ footer {
 			font-weight: 700;
 			padding-top: 219px;
 			margin-bottom: 110px;
+
 		}
 		a {
 			color: #fecb94;
@@ -278,6 +290,57 @@ footer {
 			text-decoration: none;
 			padding: 22px 75px;
 			background-color: #e7ab4d;
+		}
+		#form {
+		    justify-content: space-around;
+		    flex-wrap: wrap;
+		    margin: 0 auto;
+		    width: 800px;
+			.left {
+				::-webkit-input-placeholder {
+					color: #e7ab4d;
+				}
+				input[type=number]::-webkit-inner-spin-button,
+				input[type=number]::-webkit-outer-spin-button {
+					-webkit-appearance: none;
+    				margin:0;
+    			}
+				input {
+					width: 350px;
+				    display: block;
+				    height: 50px;
+				    margin-bottom: 20px;
+				    margin-right: 20px;
+				    border: 1px solid #e7ab4d;
+				    background-color: transparent;
+				    padding-left: 20px;
+				    color: white;
+				    font-size: 25px;
+				}
+			}
+			.right {
+				textarea {
+					width: 350px;
+					height: 196px;
+					border: 1px solid #e7ab4d;
+					background-color: transparent;
+					padding-left: 5px;
+					padding-right: 5px;
+				    color: white;
+				    font-size: 25px;
+				    resize: none;
+				}
+			}
+			.btnSend {
+				background-color: transparent;
+				border: 4px solid #e7ab4d;
+			}
+		}
+		.notShow {
+			display: none; 
+		}
+		.show {
+			display: block;
 		}
 	}
 	.contact {
@@ -295,6 +358,12 @@ footer {
 				letter-spacing: 0.55px;
 				span {
 					color: #646363;
+				}
+				&:hover {
+					color:white;
+				}
+				&:hover span {
+					color:white;
 				}
 			}
 		}
@@ -321,6 +390,9 @@ footer {
 				text-transform: uppercase;
 				letter-spacing: 1.2px;
 				text-decoration: none;
+				&:hover {
+					color: white;
+				}
 			}
 			p {
 				margin-top: 87px;
@@ -331,6 +403,7 @@ footer {
 				text-transform: uppercase;
 				letter-spacing: 0.6px;
 				position: relative;
+				margin-bottom: 67px;
 				&:after {
 					position: absolute;
 					content: url(../img/next_logo.png);
@@ -338,6 +411,9 @@ footer {
 					width: 23px;
 					top: -6px;
 					right: 27px;
+				}
+				&:hover {
+					color: white;
 				}
 			}
 		}
@@ -371,6 +447,8 @@ footer {
 		}	
 	}
 }
+
+
 @media (min-width: 320px) and (max-width: 1199px) {
 	.container {
 		width: 100%;
@@ -380,8 +458,6 @@ footer {
 	}
 	h1 {
 		text-shadow: 0 15px 60px rgba(61, 61, 61, 0.3);
-		color: #ffffff;
-		font-family: "Circe - Extra Bold";
 		font-size: 36px;
 		margin-top: 61px;
 		text-align: center;
@@ -532,13 +608,8 @@ footer {
 		background-size: cover;
 		padding-top: 0;
 		min-width: auto;
-		position: relative;
 		&:after {
-			position: absolute;
-			content: "";
-			background-color: #282828;
 			height: 1px;
-			width: 100%;
 			bottom: 85px;
 		}
 		.logo {
@@ -559,6 +630,34 @@ footer {
 				padding: 7px 38px;
 				background-color: transparent;
     			border: 1px solid;
+			}
+			#close {
+				font-size: 40px;
+				right: 100px;
+				padding: 0;
+				border: none;
+				}
+			#form {
+			    width: auto;
+				.left {
+					order: 3;
+					input {
+						width: 200px;
+					    display: block;
+					    height: 30px;
+					    margin-bottom: 10px;
+					    margin-right: auto;
+					    padding-left: 10px;
+					    font-size: 15px;
+					}
+				}
+				.right {
+					order: 2;
+					textarea {
+						width: 200px;
+						height: 130px;
+					}
+				}
 			}
 		}
 		.contact {

@@ -6,6 +6,7 @@
 	<title>Document</title>
 	<link rel="stylesheet" href="styles/reset.css">
 	<link rel="stylesheet" href="styles/style.css">
+	<link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
 </head>
 <body>
 	<div class="container border">
@@ -46,11 +47,26 @@
 	<footer>
 		<div class="container">
 			<div class="logo">
-				<h2>
+				<a href="#" class="notShow" id="close"></a>
+				<h2 id="showFirst">
 					Want to know more about our services?
 					Interested in started a project?
 				</h2>
-				<a href="#"> Let’s talk</a>
+				<h2 id="notShowFirst" class="notShow">
+					Leave your contact details
+				</h2>
+				<a href="#" id="talk"> Let’s talk</a>
+				<div id="form" class="notShow">
+					<div class="left">
+						<input type="text" name="name" maxlength="20" placeholder="Your Name">
+						<input type="text" name="email" maxlength="20" placeholder="Your Email">
+						<input type="number" name="tel" placeholder="Your Phone">
+					</div>
+					<div class="right">
+						<textarea name="text" cols="30" rows="10"></textarea>
+					</div>
+					<a href="#" class="btnSend">Send</a>
+				</div>
 			</div>
 			<div class="contact">
 				<div class="copy">
@@ -97,5 +113,31 @@
 			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="11" height="24" viewBox="0 0 14 25"><defs><path id="oqob" d="M1073 2582v3l-3-.05v4.04h3V2599h4v-10h3s.85-1.88 1-4h-4v-3c0-.41.47-1 1-1h3v-4h-3.62c-5.12 0-4.38 4.4-4.38 5z"/></defs><g><g transform="translate(-1068 -2575)"><use fill="#d4d4d4" xlink:href="#oqob"/></g></g></svg>
 		</a>
 	</div>
+
+	<!-- <div class="logo">
+		<h2 id="showFirst">
+			Want to know more about our services?
+			Interested in started a project?
+		</h2>
+		<h2 id="notShowFirst" class="notShow">
+			Новый Заголовок Lorem ipsum dolor
+			gdgrd drgdrgdrg drgdg sit amet.
+		</h2>
+		<a href="#" id="talk"> Let’s talk</a>
+		<div id="form" class="notShow">
+			<div class="left">
+				<input type="text" placeholder="Your Name">
+				<input type="text" placeholder="Your Email">
+				<input type="tel" placeholder="Your Phone">
+			</div>
+			<div class="right">
+				<input type="text">
+			</div>
+			<a href="#">send</a>
+		</div>
+	</div> -->
+
+	<script src="javascript/jquery.js"></script>
+	<script src="javascript/js.js"></script>
 </body>
 </html>

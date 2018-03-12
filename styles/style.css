@@ -14,8 +14,8 @@
   font-weight: 400;
 }
 @font-face {
-  font-family: "Proxima Nova - Extrabld";
-  src: url(../fonts/ProximaNovaExtraBold/proximanova-extrabold.woff);
+  font-family: "fontawesome";
+  src: url(../fonts/fontawesome-webfont.woff);
   font-weight: 400;
 }
 .container {
@@ -259,6 +259,17 @@ footer .logo {
   min-height: 550px;
   text-align: center;
   margin-top: 268px;
+  position: relative;
+}
+footer .logo #close {
+  position: absolute;
+  font-family: fontawesome;
+  font-size: 60px;
+  font-weight: 100;
+  top: 70px;
+  right: 150px;
+  padding: 0;
+  background-color: transparent;
 }
 footer .logo h2 {
   width: 1055px;
@@ -279,6 +290,53 @@ footer .logo a {
   padding: 22px 75px;
   background-color: #e7ab4d;
 }
+footer .logo #form {
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  width: 800px;
+}
+footer .logo #form .left ::-webkit-input-placeholder {
+  color: #e7ab4d;
+}
+footer .logo #form .left input[type=number]::-webkit-inner-spin-button,
+footer .logo #form .left input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+footer .logo #form .left input {
+  width: 350px;
+  display: block;
+  height: 50px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  border: 1px solid #e7ab4d;
+  background-color: transparent;
+  padding-left: 20px;
+  color: white;
+  font-size: 25px;
+}
+footer .logo #form .right textarea {
+  width: 350px;
+  height: 196px;
+  border: 1px solid #e7ab4d;
+  background-color: transparent;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: white;
+  font-size: 25px;
+  resize: none;
+}
+footer .logo #form .btnSend {
+  background-color: transparent;
+  border: 4px solid #e7ab4d;
+}
+footer .logo .notShow {
+  display: none;
+}
+footer .logo .show {
+  display: block;
+}
 footer .contact {
   display: flex;
   justify-content: space-between;
@@ -295,6 +353,12 @@ footer .contact .copy p {
 }
 footer .contact .copy p span {
   color: #646363;
+}
+footer .contact .copy p:hover {
+  color: white;
+}
+footer .contact .copy p:hover span {
+  color: white;
 }
 footer .contact .social a {
   margin-right: 35px;
@@ -317,6 +381,9 @@ footer .contact .mail a {
   letter-spacing: 1.2px;
   text-decoration: none;
 }
+footer .contact .mail a:hover {
+  color: white;
+}
 footer .contact .mail p {
   margin-top: 87px;
   color: #6f6f6f;
@@ -326,6 +393,7 @@ footer .contact .mail p {
   text-transform: uppercase;
   letter-spacing: 0.6px;
   position: relative;
+  margin-bottom: 67px;
 }
 footer .contact .mail p:after {
   position: absolute;
@@ -334,6 +402,9 @@ footer .contact .mail p:after {
   width: 23px;
   top: -6px;
   right: 27px;
+}
+footer .contact .mail p:hover {
+  color: white;
 }
 .fixed {
   display: flex;
@@ -370,8 +441,6 @@ footer .contact .mail p:after {
   }
   h1 {
     text-shadow: 0 15px 60px rgba(61, 61, 61, 0.3);
-    color: #ffffff;
-    font-family: "Circe - Extra Bold";
     font-size: 36px;
     margin-top: 61px;
     text-align: center;
@@ -522,14 +591,9 @@ footer .contact .mail p:after {
     background-size: cover;
     padding-top: 0;
     min-width: auto;
-    position: relative;
   }
   footer:after {
-    position: absolute;
-    content: "";
-    background-color: #282828;
     height: 1px;
-    width: 100%;
     bottom: 85px;
   }
   footer .logo {
@@ -551,6 +615,34 @@ footer .contact .mail p:after {
     padding: 7px 38px;
     background-color: transparent;
     border: 1px solid;
+  }
+  footer .logo #close {
+    font-size: 40px;
+    right: 100px;
+    padding: 0;
+    border: none;
+  }
+  footer .logo #form {
+    width: auto;
+  }
+  footer .logo #form .left {
+    order: 3;
+  }
+  footer .logo #form .left input {
+    width: 200px;
+    display: block;
+    height: 30px;
+    margin-bottom: 10px;
+    margin-right: auto;
+    padding-left: 10px;
+    font-size: 15px;
+  }
+  footer .logo #form .right {
+    order: 2;
+  }
+  footer .logo #form .right textarea {
+    width: 200px;
+    height: 130px;
   }
   footer .contact {
     display: flex;
